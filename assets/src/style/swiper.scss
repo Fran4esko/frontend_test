@@ -1,0 +1,50 @@
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev::after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    display: none;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: 64px;
+    left: auto;
+    background: url(../img/next.svg) center right no-repeat;
+    @media (max-width: 767px) {
+        right: 16px;
+    }
+}
+.swiper-button-next:hover,
+.swiper-rtl .swiper-button-prev:hover {
+    background: url(../img/next-hover.svg) center right no-repeat;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: 64px;
+    right: auto;
+    background: url(../img/prev.svg) center left no-repeat;
+    @media (max-width: 767px) {
+        left: 16px;
+    }
+}
+.swiper-button-prev:hover,
+.swiper-rtl .swiper-button-next:hover {
+    background: url(../img/prev-hover.svg) center left no-repeat;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 30px;
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+    @media (max-width: 767px) {
+        width: 58px;
+        height: 30px;
+    }
+}

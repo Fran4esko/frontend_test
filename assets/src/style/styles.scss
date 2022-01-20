@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Noir Pro Light";
+    src: local("Noir Pro Light"), local("Noir-Pro-Light"), url("../fonts/NoirPro-Light.woff2") format("woff2"),
+        url("../fonts/NoirPro-Light.woff") format("woff"), url("../fonts/NoirPro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Noir Pro Bold Italic";
+    src: local("Noir Pro Bold Italic"), local("Noir-Pro-Bold-Italic"),
+        url("../fonts/NoirPro-BoldItalic.woff2") format("woff2"), url("../fonts/NoirPro-BoldItalic.woff") format("woff"),
+        url("../fonts/NoirPro-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+body {
+    background: #cfcfcf;
+    height: 100vh;
+}
+a * {
+    transition: 0.3s linear;
+}
+.logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/logo.svg) no-repeat;
+    position: absolute;
+    top: 53px;
+    right: 64px;
+    z-index: 100;
+    @media (max-width: 767px) {
+        top: 17px;
+        right: 16px;
+    }
+}
+.cars {
+    .items {
+        .item {
+            height: 100vh;
+            background-size: cover;
+            &::after {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(../img/bg-top.png) top left no-repeat;
+            }
+            .id {
+                width: 100%;
+                position: absolute;
+                top: 15px;
+                font-family: "Noir Pro Bold Italic";
+                font-size: 132px;
+                line-height: 155px;
+                letter-spacing: -0.05em;
+                text-transform: uppercase;
+                color: #393939;
+                padding: 0 64px;
+                background: url(../img/id-bg.svg) center bottom no-repeat;
+                background-size: contain;
+                z-index: 5;
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                    line-height: 37px;
+                    letter-spacing: -0.05em;
+                    top: 29px;
+                    padding: 0 16px 21px;
+                }
+            }
+            .text {
+                position: absolute;
+                left: 72px;
+                top: 224px;
+                width: 150px;
+                z-index: 5;
+                .name {
+                    color: #727272;
+                    letter-spacing: -0.05em;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    line-height: 132.7%;
+                    font-family: "Noir Pro Light";
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    @media (max-width: 767px) {
+                        top: 117px;
+                        left: 16px;
+                        font-size: 20px;
+                        line-height: 132.7%;
+                        letter-spacing: -0.05em;
+                    }
+                }
+                .desc {
+                    color: #727272;
+                    font-size: 20px;
+                    line-height: 132.7%;
+                    font-family: "Noir Pro Light";
+                    -webkit-line-clamp: 4;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            .img {
+                height: 100%;
+                img {
+                    min-width: 100%;
+                    height: 100%;
+                }
+            }
+            .like {
+                color: #727272;
+                font-size: 32px;
+                line-height: 37px;
+                letter-spacing: -0.05em;
+                position: absolute;
+                bottom: 27px;
+                width: 100%;
+                text-align: center;
+                font-family: "Noir Pro Bold Italic";
+                z-index: 5;
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                    line-height: 23px;
+                    bottom: 29px;
+                }
+                span {
+                    margin-left: 5px;
+                    color: #f36a1d;
+                }
+            }
+            .like__btn {
+                width: 72px;
+                height: 72px;
+                position: absolute;
+                bottom: 87px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url(../img/like.svg);
+                background-size: contain;
+                z-index: 5;
+                @media (max-width: 767px) {
+                    width: 54px;
+                    height: 54px;
+                    bottom: 55px;
+                }
+                &:hover {
+                    background: url(../img/like_hover.svg);
+                    background-size: cover;
+                }
+                &.active {
+                    background: url(../img/like_active.svg);
+                    background-size: cover;
+                    cursor: auto;
+                    pointer-events: none;
+                    &:hover {
+                        background: url(../img/like_active-hover.svg);
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+.social {
+    position: absolute;
+    bottom: 40px;
+    right: 64px;
+    z-index: 11;
+    @media (max-width: 767px) {
+        bottom: 23px;
+        right: 11px;
+        width: 34px;
+    }
+    a {
+        margin: 0 15px;
+        @media (max-width: 767px) {
+            margin: 0;
+        }
+        svg {
+            @media (max-width: 767px) {
+                width: 34px;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+            path {
+                fill: #f36a1d;
+            }
+        }
+    }
+}
+.popup {
+    display: none;
+    width: 543px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #393939;
+    padding: 25px 32px;
+    z-index: 12;
+    @media (max-width: 767px) {
+        width: 90%;
+    }
+    .close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 26px;
+        height: 25px;
+        background: url(../img/close.svg);
+    }
+    .header {
+        color: #727272;
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: -0.05em;
+        font-family: "Noir Pro Bold Italic";
+        @media (max-width: 767px) {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: -0.05em;
+        }
+    }
+    .content {
+        font-size: 20px;
+        line-height: 132.7%;
+        font-family: "Noir Pro Light";
+        letter-spacing: -0.05em;
+        color: #ffffff;
+        margin-top: 28px;
+        @media (max-width: 767px) {
+            font-size: 20px;
+            line-height: 132.7%;    
+            letter-spacing: -0.05em;
+        }
+    }
+}

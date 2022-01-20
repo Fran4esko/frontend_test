@@ -7952,25 +7952,6 @@ button.swiper-pagination-bullet {
 .swiper-centered > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: center center; }
 
-@font-face {
-  font-family: "Noir Pro Light";
-  src: local("Noir Pro Light"), local("Noir-Pro-Light"), url("../fonts/NoirPro-Light.woff2") format("woff2"), url("../fonts/NoirPro-Light.woff") format("woff"), url("../fonts/NoirPro-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Noir Pro Bold Italic";
-  src: local("Noir Pro Bold Italic"), local("Noir-Pro-Bold-Italic"), url("../fonts/NoirPro-BoldItalic.woff2") format("woff2"), url("../fonts/NoirPro-BoldItalic.woff") format("woff"), url("../fonts/NoirPro-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic; }
-
-body {
-  background: #cfcfcf;
-  height: 100vh; }
-
-a * {
-  transition: 0.3s linear; }
-
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev::after,
 .swiper-button-prev:after,
@@ -8023,6 +8004,25 @@ a * {
     .swiper-button-prev {
       width: 58px;
       height: 30px; } }
+
+@font-face {
+  font-family: "Noir Pro Light";
+  src: local("Noir Pro Light"), local("Noir-Pro-Light"), url("../fonts/NoirPro-Light.woff2") format("woff2"), url("../fonts/NoirPro-Light.woff") format("woff"), url("../fonts/NoirPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Noir Pro Bold Italic";
+  src: local("Noir Pro Bold Italic"), local("Noir-Pro-Bold-Italic"), url("../fonts/NoirPro-BoldItalic.woff2") format("woff2"), url("../fonts/NoirPro-BoldItalic.woff") format("woff"), url("../fonts/NoirPro-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+body {
+  background: #cfcfcf;
+  height: 100vh; }
+
+a * {
+  transition: 0.3s linear; }
 
 .logo {
   display: block;
